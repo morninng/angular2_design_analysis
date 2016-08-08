@@ -1,0 +1,8 @@
+Webpackバージョンに変更したので、
+https://github.com/angular/angular-cli/blob/master/WEBPACK_UPDATE.md
+こっちにフォローしてインストールをする。
+
+routerの設定をして、一つ一つのデモを別にできるようにする。
+ - Victor
+    - template Syntax
+    - 
