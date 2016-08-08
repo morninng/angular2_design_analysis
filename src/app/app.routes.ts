@@ -6,6 +6,10 @@ const routes: RouterConfig = [
   {
     path: 'template-parent',
     component: TemplateParentComponent
+  },
+  {
+    path: '',
+    component: TemplateParentComponent
   }
 ];
 
