@@ -1,6 +1,6 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
 import { TemplateParentComponent } from './Victor/TemplateSyntax/template-parent/template-parent.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 const routes: RouterConfig = [
   {
@@ -9,7 +9,7 @@ const routes: RouterConfig = [
   },
   {
     path: '',
-    component: TemplateParentComponent
+    component: DashboardComponent
   }
 ];
 
