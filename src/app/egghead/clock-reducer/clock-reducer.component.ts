@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject, Observable} from 'rxjs/Rx';
-import {Store} from '@ngrx/store';
+import {Store, Action} from '@ngrx/store';
 import {HOUR, SECOND} from './reducer'
 
 @Component({
@@ -18,12 +18,12 @@ export class ClockReducerComponent implements OnInit {
     this.clock = store.select('clock');
 
     Observable.merge(
-      this.click$.mapTo(HOUR),
-      Observable.interval(1000).mapTo(SECOND)
+      this.click$.mapTo({type:HOUR,payload:3}),
+      Observable.interval(1000).mapTo({type:SECOND,payload:2})
     )
-    .subscribe((type)=>{
-      console.log(type);
-      store.dispatch({type})
+    .subscribe((action : Action)=>{
+      console.log(action);
+      store.dispatch(action)
     })
    }
 
