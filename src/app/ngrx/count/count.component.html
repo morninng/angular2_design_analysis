@@ -1,3 +1,9 @@
 <p>
   count works!
 </p>
+
+count is {{counter | async}}
+
+<input type="button" (click)="increment()" value="increment">
+<input type="button" (click)="decrement()" value="decrement">
+<input type="button" (click)="reset()" value="reset">

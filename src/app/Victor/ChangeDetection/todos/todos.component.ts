@@ -4,6 +4,7 @@ import {ImmutableTodoComponent}  from './../immutable-todo/immutable-todo.compon
 import {ObservableTodoComponent}  from './../observable-todo/observable-todo.component'
 import {Observable, BehaviorSubject } from 'rxjs/Rx';
 
+
 type ObservableTodo = BehaviorSubject<Todo>;
 type ObservableTodos = BehaviorSubject<Array<ObservableTodo>>;
 
@@ -18,7 +19,6 @@ export class TodosComponent implements OnInit {
 
   todos_immutable :Todo[];
   todos_observable :ObservableTodos;
-  todo_observable2 : 
 
 
   constructor() {

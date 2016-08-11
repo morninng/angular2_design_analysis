@@ -17,7 +17,7 @@ export class StartwithScan5Component implements OnInit {
             Observable.interval(1000)
         )
         .startWith(new Date())
-        .scan((acc, curr)=> {
+        .scan((acc : Date, curr)=> {
             const date = new Date(acc.getTime());
 
             date.setSeconds(date.getSeconds() + 1);
