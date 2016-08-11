@@ -1,3 +1,15 @@
 <p>
   todos works!
 </p>
+
+----app immutable todo---
+
+<app-immutable-todo  *ngFor="let t of todos_immutable" [todo]="t"></app-immutable-todo>
+
+
+----app observable todo---
+
+
+<input type="button" (click)="add_todo()">
+
+<app-observable-todo *ngFor="let item of todos_observable |async" [todo]="item"></app-observable-todo>

@@ -1,0 +1,9 @@
+<p>
+  observable-todo works!
+</p>
+
+
+{{(todo |async).name}} {{(todo |async).checked}} 
+<input type="button" (click)="change_check_status()" value="change status">
+<input type="button" (click)="change_data()" value="change data">
+
