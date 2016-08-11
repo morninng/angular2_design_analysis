@@ -4,6 +4,7 @@ import {TodosComponent} from './Victor/ChangeDetection/todos/todos.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
 import {StartwithScan5Component} from './egghead/startwith-scan-5/startwith-scan-5.component'
 import {CountComponent} from './ngrx/count/count.component'
+import {ClockReducerComponent} from './egghead/clock-reducer/clock-reducer.component';
 
 const routes: RouterConfig = [
   {
@@ -25,6 +26,10 @@ const routes: RouterConfig = [
   {
     path: 'count_component',
     component: CountComponent
+  },
+  {
+    path: "Clock_Reducer",
+    component: ClockReducerComponent
   }
 
 ];

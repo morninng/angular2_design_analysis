@@ -5,6 +5,7 @@ import { AppComponent, environment } from './app/';
 import { appRouterProviders } from './app/app.routes'
 
 import {CounterReducer} from './app/ngrx/counter-reducer'
+import {clockReducer} from './app/egghead/clock-reducer/reducer'
 
 if (environment.production) {
   enableProdMode();
@@ -12,5 +13,5 @@ if (environment.production) {
 
 bootstrap(AppComponent, [
   appRouterProviders,
-  provideStore({counter: CounterReducer})
+  provideStore({counter: CounterReducer, clock: clockReducer})
 ]);
