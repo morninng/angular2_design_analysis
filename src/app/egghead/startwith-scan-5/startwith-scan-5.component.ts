@@ -27,6 +27,7 @@ export class StartwithScan5Component implements OnInit {
  }
 
   ngOnInit() {
+    
   }
 
 }
