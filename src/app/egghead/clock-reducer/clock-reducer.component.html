@@ -6,5 +6,8 @@
 
 <input type="button" value="timer_progress" (click)="click$.next(inputNum.value)">
 
-{{clock | async}}
 
+<app-clock [timing]="timer | async"></app-clock>
+
+
+ <!-- {{clock | async}} -->
