@@ -11,16 +11,19 @@ import {HOUR, SECOND} from './reducer'
 
 export class ClockReducerComponent implements OnInit {
 
-  click$ = new Subject();
+  click$ = new Subject()
+            .map((value :string)=>{
+              return {type:HOUR, payload:parseInt(value)}
+            });
+
+  seconds$ = Observable.interval(1000)
+            .mapTo({type:SECOND,payload:2});
 
   clock;
   constructor(store:Store<Date>) {
     this.clock = store.select('clock');
 
-    Observable.merge(
-      this.click$.mapTo({type:HOUR,payload:3}),
-      Observable.interval(1000).mapTo({type:SECOND,payload:2})
-    )
+    Observable.merge( this.click$, this.seconds$)
     .subscribe((action : Action)=>{
       console.log(action);
       store.dispatch(action)

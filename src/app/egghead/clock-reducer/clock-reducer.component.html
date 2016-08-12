@@ -2,7 +2,9 @@
   clock-reducer works!
 </p>
 
-<input type="button" value="timer_progress" (click)="click$.next()">
+<input type="number" #inputNum value="0">
+
+<input type="button" value="timer_progress" (click)="click$.next(inputNum.value)">
 
 {{clock | async}}
 
