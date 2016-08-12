@@ -9,5 +9,9 @@
 
 <app-clock [timing]="timer | async"></app-clock>
 
+<div (click)="person$.next(person)" *ngFor="#person of people | async">
+  {{person.name}} is in {{person.time | date:'jms'}}
+</div>
+
 
  <!-- {{clock | async}} -->
